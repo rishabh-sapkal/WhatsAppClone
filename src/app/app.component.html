@@ -1,0 +1,10 @@
+<diV *ngIf ="userSignedIn" class="app">
+
+
+<div class="app__body">
+<app-sidebar class="app__sidebar"></app-sidebar>
+<app-chat class="app__chat"></app-chat>
+</div>
+</diV>
+
+<app-login *ngIf ="!userSignedIn" class="login"></app-login>

@@ -1,0 +1,48 @@
+<diV class="chat">
+    <diV class="chat__header">
+        <diV class="chat__header--avatar">
+            <img [src]= imageUrl >
+        </diV>
+        <diV class="chat__header--headerInfo">
+            <h3>{{roomName}}</h3>
+             <p>Last Activity :</p>
+        </diV>
+        <diV class="chat__header--right">
+            <span class="material-icons">
+                search
+            </span>
+            <span class="material-icons">
+                attach_file
+            </span>
+            <span class="material-icons">
+                more_vert
+            </span>
+
+        </diV>
+    </diV>
+    <diV class="chat__body">
+        <p [ngClass]= "{'chat__reciever': chat.name == userName}"  class="chat__message" *ngFor= "let chat of arrChatData">
+
+            <span class="chat__message--name">
+            {{chat.name}}
+            </span>
+            {{chat.message}}
+            <span class="chat__message--time">
+            {{chat.timeStamp?.toDate() | date: 'medium'}}
+            </span>
+
+        </p>
+    </diV>
+    <diV class="chat__footer">
+        <span class="material-icons">
+            insert_emoticon
+        </span>
+        <form class="chat__footer--searchBox">
+            <input placeholder="Type a message" type="text" [(ngModel)]= "message" name="message">
+            <button type ="submit" (click) = "pushMessage($event)">this is a Button</button>
+        </form>
+        <span class="material-icons">
+            mic
+        </span>
+    </diV>
+</diV>

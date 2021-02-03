@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "whatsapp-clone-90b07": {
+      "hosting": {
+        "Whatsap": [
+          "whatsapp-clone-90b07"
+        ]
+      }
+    }
+  }
+}

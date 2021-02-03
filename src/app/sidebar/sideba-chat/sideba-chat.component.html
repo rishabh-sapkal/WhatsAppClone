@@ -1,0 +1,14 @@
+<diV *ngIf="addNew" class="sidebarChat">
+    <h3>Add a new Room</h3>
+</diV>
+
+<diV *ngIf="!addNew" class="sidebarChat">
+    <diV class="sidebarChat__avatar">
+        <img src="{{imageUrl}}">
+    </diV>
+    <diV class="sidebarChat__roomInfo">
+        <h3>{{roomName}}</h3>
+        <p> {{lastMessage}}</p>
+
+    </diV>
+</diV>
